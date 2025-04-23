@@ -126,12 +126,12 @@
       <a name="label" val="imm8"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(1300,430)" name="Tunnel">
+    <comp lib="0" loc="(1310,400)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="B"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(1310,400)" name="Tunnel">
+    <comp lib="0" loc="(1320,430)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="imm8"/>
       <a name="width" val="8"/>
@@ -167,12 +167,48 @@
       <a name="label" val="ULAop"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(1640,800)" name="Splitter">
+      <a name="bit10" val="7"/>
+      <a name="bit4" val="3"/>
+      <a name="bit5" val="3"/>
+      <a name="bit6" val="3"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="5"/>
+      <a name="bit9" val="6"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="11"/>
+    </comp>
     <comp lib="0" loc="(1700,410)" name="Tunnel">
       <a name="label" val="brzrOK"/>
     </comp>
     <comp lib="0" loc="(1730,440)" name="Tunnel">
       <a name="label" val="ULAdata"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1790,640)" name="Tunnel">
+      <a name="label" val="JIJR"/>
+    </comp>
+    <comp lib="0" loc="(1790,670)" name="Tunnel">
+      <a name="label" val="branchOK"/>
+    </comp>
+    <comp lib="0" loc="(1790,700)" name="Tunnel">
+      <a name="label" val="SelBranch"/>
+    </comp>
+    <comp lib="0" loc="(1790,730)" name="Tunnel">
+      <a name="label" val="ULAop"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1790,760)" name="Tunnel">
+      <a name="label" val="ULAsrc"/>
+    </comp>
+    <comp lib="0" loc="(1790,790)" name="Tunnel">
+      <a name="label" val="WMD"/>
+    </comp>
+    <comp lib="0" loc="(1790,820)" name="Tunnel">
+      <a name="label" val="WBR"/>
+    </comp>
+    <comp lib="0" loc="(1790,850)" name="Tunnel">
+      <a name="label" val="WDU"/>
     </comp>
     <comp lib="0" loc="(200,420)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -304,7 +340,8 @@
       <a name="addrWidth" val="4"/>
       <a name="appearance" val="classic"/>
       <a name="contents">addr/data: 4 11
-0
+1a a5 624 124 2a0 2b8 234 21
+204 20c 214 21c 224 22c 244 24c
 </a>
       <a name="dataWidth" val="11"/>
     </comp>
@@ -316,10 +353,13 @@
       <a name="facing" val="north"/>
       <a name="label" val="reset"/>
     </comp>
-    <comp lib="8" loc="(1523,739)" name="Text">
+    <comp lib="8" loc="(1520,735)" name="Text">
       <a name="text" val="Mem de Controle"/>
     </comp>
-    <comp lib="8" loc="(926,729)" name="Text">
+    <comp lib="8" loc="(865,563)" name="Text">
+      <a name="text" val="Mux para selecionar ra ou r0? Para addi e multi"/>
+    </comp>
+    <comp lib="8" loc="(925,725)" name="Text">
       <a name="text" val="Mem de Inst e Dados"/>
     </comp>
     <comp loc="(1140,390)" name="BancoReg"/>
@@ -338,7 +378,6 @@
     <wire from="(1250,250)" to="(1270,250)"/>
     <wire from="(1270,250)" to="(1270,260)"/>
     <wire from="(1270,260)" to="(1300,260)"/>
-    <wire from="(1300,430)" to="(1340,430)"/>
     <wire from="(1300,740)" to="(1330,740)"/>
     <wire from="(1300,750)" to="(1350,750)"/>
     <wire from="(1300,760)" to="(1380,760)"/>
@@ -347,6 +386,7 @@
     <wire from="(1300,790)" to="(1380,790)"/>
     <wire from="(1300,860)" to="(1330,860)"/>
     <wire from="(1310,400)" to="(1330,400)"/>
+    <wire from="(1320,430)" to="(1340,430)"/>
     <wire from="(1330,400)" to="(1330,410)"/>
     <wire from="(1330,410)" to="(1340,410)"/>
     <wire from="(1330,700)" to="(1330,740)"/>
@@ -360,8 +400,29 @@
     <wire from="(1470,420)" to="(1470,430)"/>
     <wire from="(1470,430)" to="(1480,430)"/>
     <wire from="(1480,390)" to="(1480,410)"/>
+    <wire from="(1660,640)" to="(1660,720)"/>
+    <wire from="(1660,640)" to="(1790,640)"/>
+    <wire from="(1660,730)" to="(1680,730)"/>
+    <wire from="(1660,740)" to="(1700,740)"/>
+    <wire from="(1660,750)" to="(1720,750)"/>
+    <wire from="(1660,760)" to="(1790,760)"/>
+    <wire from="(1660,770)" to="(1770,770)"/>
+    <wire from="(1660,780)" to="(1720,780)"/>
+    <wire from="(1660,790)" to="(1660,880)"/>
+    <wire from="(1660,880)" to="(1790,880)"/>
+    <wire from="(1680,670)" to="(1680,730)"/>
+    <wire from="(1680,670)" to="(1790,670)"/>
     <wire from="(1700,430)" to="(1730,430)"/>
+    <wire from="(1700,700)" to="(1700,740)"/>
+    <wire from="(1700,700)" to="(1790,700)"/>
+    <wire from="(1720,730)" to="(1720,750)"/>
+    <wire from="(1720,730)" to="(1790,730)"/>
+    <wire from="(1720,780)" to="(1720,820)"/>
+    <wire from="(1720,820)" to="(1790,820)"/>
     <wire from="(1730,430)" to="(1730,440)"/>
+    <wire from="(1770,770)" to="(1770,790)"/>
+    <wire from="(1770,790)" to="(1790,790)"/>
+    <wire from="(1790,850)" to="(1790,880)"/>
     <wire from="(210,370)" to="(270,370)"/>
     <wire from="(250,440)" to="(260,440)"/>
     <wire from="(260,410)" to="(260,440)"/>
@@ -698,23 +759,23 @@
       <a name="shift" val="lr"/>
     </comp>
     <comp lib="3" loc="(950,210)" name="Comparator"/>
-    <comp lib="8" loc="(747,374)" name="Text">
-      <a name="text" val="Dec"/>
-    </comp>
-    <comp lib="8" loc="(749,185)" name="Text">
+    <comp lib="8" loc="(745,185)" name="Text">
       <a name="text" val="Add"/>
     </comp>
-    <comp lib="8" loc="(750,278)" name="Text">
+    <comp lib="8" loc="(745,370)" name="Text">
+      <a name="text" val="Dec"/>
+    </comp>
+    <comp lib="8" loc="(750,275)" name="Text">
       <a name="text" val="Sub"/>
     </comp>
-    <comp lib="8" loc="(750,654)" name="Text">
-      <a name="text" val="Srr"/>
-    </comp>
-    <comp lib="8" loc="(752,462)" name="Text">
+    <comp lib="8" loc="(750,460)" name="Text">
       <a name="text" val="Mult"/>
     </comp>
-    <comp lib="8" loc="(753,554)" name="Text">
+    <comp lib="8" loc="(750,550)" name="Text">
       <a name="text" val="Slr"/>
+    </comp>
+    <comp lib="8" loc="(750,650)" name="Text">
+      <a name="text" val="Srr"/>
     </comp>
     <wire from="(160,360)" to="(310,360)"/>
     <wire from="(160,390)" to="(300,390)"/>
