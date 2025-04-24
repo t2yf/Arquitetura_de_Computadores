@@ -20,7 +20,7 @@
     dec r2 ;; r2 = 19 
     multi 7 ;; r0 = 140
     add r1, r0 ;; r1 = 140
-    dec r1 ;; r1 = 139
+    dec r1 ;; r1 = 139 | final de B 
     xor r0, r0 
     addi 15 
     st r3, r0 ;; #255 = 10 
@@ -28,10 +28,10 @@
 ;; Calcular salto jr
     xor r0, r0 
     addi 5
-    multi 5 
+    multi 7 
     add r3, r0 ;; r3 = 45
     xor r0, r0 
-    addi 3
+    addi 13
     st r3, r0 ;; #253 = 45
 
 ;; Calcular salto r3 brzr
@@ -64,11 +64,11 @@
         st r2, r1 ;; A[r1] = r2
 
         ;; Atualizar valor de r2 para escrever em B 
-        dec r2, 1 ;; r2 = r2 -1 | Número ímpar
+        dec r2 ;; r2 = r2 -1 | Número ímpar
 
         ;;Retornar ao vetor B 
         add r1, r0 ;; Retornar para B 
-        dec r1, 1 ;; Decrementar uma posição
+        dec r1  ;; Decrementar uma posição
 
         ;; Carregar valor de salto
         xor r0, r0 ;; limpar r0 
@@ -79,11 +79,11 @@
 ;; Fim de loop: r0 = 0; r2 = 0; r3 = pos; r1 = 120 (início de A)
 
 ;; Calcular novo salto de r3 para brzr
-    addi 6
-    add r3, r0 ;; r3 = 73
+    addi 5
+    add r3, r0 ;; r3 = 50
     xor r0, r0
     addi 14
-    ld r3, r0 ;; #254 = r3
+    ld r3, r0 ;; #254 = 50
     xor r0, r0
 ;; Soma 
         ;; Carregar valor de A 
@@ -99,10 +99,10 @@
 
         ;;Somar 
         add r2, r3 ;; r2 = val.A + val.B 
-        xor r0, r0 
+      
 
         ;;Ir para R 
-        addi r1, r0 ;; Ir para R 
+        add r1, r0 ;; Ir para R 
         st r2, r1 ;; Guardar em R 
 
         ;; Voltar para A 
@@ -116,7 +116,7 @@
         ld r3, r0 ;; r3 = #254 
 
         ;; Recuperar valor de r2 
-        addi 1
+        addi 15
         ld r2, r0 ;; r2 = contador 
         dec r2 ;; decrementa r2 
         st r2, r0 ;; guarda iterador 
