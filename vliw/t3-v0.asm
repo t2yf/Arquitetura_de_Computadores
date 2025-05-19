@@ -1,6 +1,13 @@
 ;; Somar dois vetores de 12 posições A+B, logo após a memória
 ;; Inicializar A, B e R
 
+;; ;; TODO armazenar os valores em memoria
+;; ;; TODO verificar se os loops fazem sentido e estão ok 
+;; ;; TODO calcular tamanho do código e onde colocar cada coisa 
+;; ;; TODO considerar vliw e ver melhor disposição do código
+
+
+
 ;; Informações 
     ;; Ordem dos vetores: A[] - B[] - R[]
 
@@ -16,6 +23,7 @@
     xor r1, r1
     xor r2, r2
     xor r3, r3
+
 
 ;; Armazenar valores em memória e Calcular ponteiro r1  (fim de R)
     ;; Armazenar 31 em #255 (??)
@@ -68,6 +76,7 @@
 
 ;; Soma 
     ;; Calcular valor de brzr e colocar em #255
+    ;; Colocar valor de comparação em #254
     xor r0, r0 
         ld r2, r1 ;; r2 = val.A 
 
@@ -79,9 +88,28 @@
         add r2, r3 ;; r2 = val.A + val.B 
 
         add r1, r0 ;; Chegar em R 
-        st r2, r1 ;; R[r1] = soma 
+        st r2, r1 ;; Guardar em R  
 
-        ;;Catar o valor de retorno e retornar para A + 1
+        sub r1, r0 
+        sub r1, r0 ;; Retornar para A 
+        xor r0, r0 
+        addi 1 
+        add r1, r0 ;; Uma posição à diante em A 
+
+        xor r3, r3 
+        add r3, r0 ;; r3 = 1 
+        addi 13 ;; r0 = #254 
+        ld r2, r0 ;; r2 = contador 
+        sub r2, r3 ;; r2 = r2 -1 
+        st r2, r0 ;; Atualizar contador 
+
+        addi 11 ;; r0 = 255 
+        ld r3, r0 ;; r3 = valor de retorno 
+
+        not r2, r2
+    brzr r2, r3 
+ji 0 ;; halt 
+
 
     
 
