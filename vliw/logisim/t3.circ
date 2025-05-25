@@ -632,10 +632,6 @@
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO escrita sinal de controle 0 ld e 1 mov"/>
     </comp>
-    <comp lib="8" loc="(1154,750)" name="Text">
-      <a name="color" val="#ff0000"/>
-      <a name="text" val="TODO eh rb msm"/>
-    </comp>
     <comp lib="8" loc="(1191,573)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="ld mov write"/>
@@ -751,6 +747,10 @@
     <comp lib="8" loc="(265,670)" name="Text">
       <a name="text" val="MemInst"/>
     </comp>
+    <comp lib="8" loc="(268,1551)" name="Text">
+      <a name="color" val="#ff0000"/>
+      <a name="text" val="TODO nop r0 r0 -&gt; ajustar hardware"/>
+    </comp>
     <comp lib="8" loc="(282,651)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="Quatro instrucoes formam uma instrucao longa"/>
@@ -770,10 +770,6 @@
     <comp lib="8" loc="(411,450)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="brzr e jr"/>
-    </comp>
-    <comp lib="8" loc="(520,685)" name="Text">
-      <a name="color" val="#ff0000"/>
-      <a name="text" val="TODO alterar ordem msb lsb"/>
     </comp>
     <comp lib="8" loc="(625,885)" name="Text">
       <a name="color" val="#ff0000"/>
