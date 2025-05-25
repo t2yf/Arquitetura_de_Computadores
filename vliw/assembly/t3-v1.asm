@@ -20,7 +20,7 @@
     movh 0 ;; r0 = 0000 1100 = 12 -> Contador
 
 ;; Inicializar R 
-    brzi 4 ;; Se r0 == 0, então pular para fora do loop 
+    brzi 4 ;; Se r0 == 0, então pular para fora do loop ;; TODO colocar st encima
         st r2, r1 ;; R[r1] = 0
         add r1, r3 ;; r1 = r1 + 1 -> andar uma posição em R 
         sub r0, r3 ;; r0 = r0 - 1 -> decrementar contador 
