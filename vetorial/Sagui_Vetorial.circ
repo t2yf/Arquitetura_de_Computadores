@@ -143,6 +143,10 @@
       <a name="label" val="WE2"/>
       <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
+    <comp lib="0" loc="(1010,1730)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+    </comp>
     <comp lib="0" loc="(1010,1840)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="WE3"/>
@@ -651,7 +655,6 @@
       <a name="labelfont" val="SansSerif bold 10"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(160,2660)" name="Clock"/>
     <comp lib="0" loc="(1600,1300)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MemV2"/>
@@ -824,14 +827,6 @@
       <a name="label" val="MD"/>
       <a name="labelfont" val="SansSerif bold 12"/>
     </comp>
-    <comp lib="0" loc="(180,2660)" name="Tunnel">
-      <a name="label" val="Clk"/>
-      <a name="labelfont" val="SansSerif bold 8"/>
-    </comp>
-    <comp lib="0" loc="(180,2700)" name="Tunnel">
-      <a name="label" val="R"/>
-      <a name="labelfont" val="SansSerif bold 8"/>
-    </comp>
     <comp lib="0" loc="(1820,1080)" name="Tunnel">
       <a name="label" val="d1"/>
       <a name="labelfont" val="SansSerif bold 10"/>
@@ -880,6 +875,15 @@
     </comp>
     <comp lib="0" loc="(420,2250)" name="Constant">
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(550,2430)" name="Clock"/>
+    <comp lib="0" loc="(570,2430)" name="Tunnel">
+      <a name="label" val="Clk"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(570,2470)" name="Tunnel">
+      <a name="label" val="R"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
     </comp>
     <comp lib="0" loc="(640,1080)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -931,12 +935,12 @@
       <a name="facing" val="north"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(750,2250)" name="Tunnel">
+    <comp lib="0" loc="(730,2250)" name="Tunnel">
       <a name="label" val="RA_ID"/>
       <a name="labelfont" val="SansSerif bold 8"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="0" loc="(750,2290)" name="Tunnel">
+    <comp lib="0" loc="(730,2290)" name="Tunnel">
       <a name="label" val="RB_ID"/>
       <a name="labelfont" val="SansSerif bold 8"/>
       <a name="width" val="2"/>
@@ -1196,7 +1200,7 @@
       <a name="width" val="2"/>
     </comp>
     <comp lib="3" loc="(480,2240)" name="Adder"/>
-    <comp lib="5" loc="(160,2700)" name="Button">
+    <comp lib="5" loc="(550,2470)" name="Button">
       <a name="label" val="Reset"/>
     </comp>
     <comp lib="8" loc="(1110,1270)" name="Text">
@@ -1421,8 +1425,7 @@
     <wire from="(1220,1440)" to="(1230,1440)"/>
     <wire from="(1220,1500)" to="(1230,1500)"/>
     <wire from="(1220,1800)" to="(1230,1800)"/>
-    <wire from="(1220,1850)" to="(1220,1860)"/>
-    <wire from="(1220,1850)" to="(1230,1850)"/>
+    <wire from="(1220,1860)" to="(1230,1860)"/>
     <wire from="(1230,1040)" to="(1230,1080)"/>
     <wire from="(1230,1040)" to="(1280,1040)"/>
     <wire from="(1230,1140)" to="(1230,1170)"/>
@@ -1433,7 +1436,7 @@
     <wire from="(1230,1530)" to="(1280,1530)"/>
     <wire from="(1230,1760)" to="(1230,1800)"/>
     <wire from="(1230,1760)" to="(1280,1760)"/>
-    <wire from="(1230,1850)" to="(1230,1890)"/>
+    <wire from="(1230,1860)" to="(1230,1890)"/>
     <wire from="(1230,1890)" to="(1280,1890)"/>
     <wire from="(1230,2380)" to="(1260,2380)"/>
     <wire from="(1230,720)" to="(1240,720)"/>
@@ -1538,8 +1541,6 @@
     <wire from="(1590,2330)" to="(1610,2330)"/>
     <wire from="(1590,720)" to="(1600,720)"/>
     <wire from="(1590,750)" to="(1600,750)"/>
-    <wire from="(160,2660)" to="(180,2660)"/>
-    <wire from="(160,2700)" to="(180,2700)"/>
     <wire from="(1600,1300)" to="(1610,1300)"/>
     <wire from="(1600,1650)" to="(1610,1650)"/>
     <wire from="(1600,570)" to="(1610,570)"/>
@@ -1595,6 +1596,8 @@
     <wire from="(420,2250)" to="(440,2250)"/>
     <wire from="(480,2240)" to="(490,2240)"/>
     <wire from="(490,2210)" to="(490,2240)"/>
+    <wire from="(550,2430)" to="(570,2430)"/>
+    <wire from="(550,2470)" to="(570,2470)"/>
     <wire from="(630,2290)" to="(640,2290)"/>
     <wire from="(640,1080)" to="(650,1080)"/>
     <wire from="(640,1440)" to="(650,1440)"/>
@@ -1604,18 +1607,18 @@
     <wire from="(660,2290)" to="(710,2290)"/>
     <wire from="(660,2300)" to="(670,2300)"/>
     <wire from="(670,2300)" to="(670,2320)"/>
+    <wire from="(710,2200)" to="(710,2250)"/>
+    <wire from="(710,2200)" to="(820,2200)"/>
+    <wire from="(710,2250)" to="(710,2290)"/>
+    <wire from="(710,2250)" to="(730,2250)"/>
     <wire from="(710,2290)" to="(710,2320)"/>
-    <wire from="(710,2290)" to="(730,2290)"/>
-    <wire from="(720,2200)" to="(720,2250)"/>
-    <wire from="(720,2200)" to="(820,2200)"/>
-    <wire from="(720,2250)" to="(720,2280)"/>
-    <wire from="(720,2250)" to="(750,2250)"/>
-    <wire from="(720,2280)" to="(720,2320)"/>
+    <wire from="(720,2270)" to="(720,2280)"/>
+    <wire from="(720,2270)" to="(880,2270)"/>
+    <wire from="(720,2280)" to="(720,2290)"/>
+    <wire from="(720,2290)" to="(720,2320)"/>
+    <wire from="(720,2290)" to="(730,2290)"/>
     <wire from="(720,2340)" to="(720,2450)"/>
     <wire from="(720,2450)" to="(950,2450)"/>
-    <wire from="(730,2270)" to="(730,2290)"/>
-    <wire from="(730,2270)" to="(880,2270)"/>
-    <wire from="(730,2290)" to="(750,2290)"/>
     <wire from="(800,2220)" to="(810,2220)"/>
     <wire from="(820,1080)" to="(840,1080)"/>
     <wire from="(820,1100)" to="(840,1100)"/>
@@ -1745,8 +1748,9 @@
     <comp lib="4" loc="(440,290)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 8
-a4 34 14 8 74 55 74 40
-40 40
+c8 b0 99 b4 c9 b1 99 b4
+c9 b2 99 bc c9 b3 99 b4
+c9 b4 99 c9 b5 c9
 </a>
     </comp>
     <wire from="(420,300)" to="(440,300)"/>
@@ -1793,6 +1797,18 @@ a4 34 14 8 74 55 74 40
       <circ-port dir="out" pin="830,530" x="270" y="200"/>
       <circ-port dir="out" pin="830,550" x="270" y="220"/>
     </appear>
+    <boardmap boardname="ALCHITRY_AU_IO">
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc/>
+      <mc key="/Opcode" pmap="526_158_0,520_100_0,465_95_0,522_32_0"/>
+      <mc key="/Vec" pmap="138_100_9"/>
+      <mc key="/VecSg" pmap="528_230_0,547_228_0,491_229_0,509_230_0,299_229_0,658_120_0,657_135_0,138_100_13"/>
+      <mc key="/WE" map="657,173"/>
+    </boardmap>
     <comp lib="0" loc="(480,330)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Opcode"/>
@@ -2139,19 +2155,22 @@ a4 34 14 8 74 55 74 40
     </comp>
     <comp lib="4" loc="(570,430)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="R1"/>
+      <a name="label" val="SR1"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="R2"/>
+      <a name="label" val="SR2"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="R3"/>
+      <a name="label" val="SR3"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
-      <a name="text" val="R0"/>
+      <a name="text" val="SR0"/>
     </comp>
     <wire from="(300,560)" to="(320,560)"/>
     <wire from="(310,300)" to="(350,300)"/>
@@ -2651,6 +2670,8 @@ a4 34 14 8 74 55 74 40
     </comp>
     <comp lib="0" loc="(500,310)" name="Splitter">
       <a name="appear" val="legacy"/>
+      <a name="bit0" val="1"/>
+      <a name="bit1" val="0"/>
       <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(500,330)" name="Splitter">
@@ -2663,6 +2684,8 @@ a4 34 14 8 74 55 74 40
     </comp>
     <comp lib="0" loc="(500,350)" name="Splitter">
       <a name="appear" val="legacy"/>
+      <a name="bit0" val="1"/>
+      <a name="bit1" val="0"/>
       <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(520,310)" name="Pin">
@@ -2864,6 +2887,8 @@ a4 34 14 8 74 55 74 40
     </comp>
     <comp lib="0" loc="(370,360)" name="Splitter">
       <a name="appear" val="center"/>
+      <a name="bit0" val="1"/>
+      <a name="bit1" val="0"/>
       <a name="spacing" val="2"/>
     </comp>
     <comp lib="0" loc="(390,340)" name="Pin">
@@ -3113,14 +3138,17 @@ a4 34 14 8 74 55 74 40
     <comp lib="4" loc="(570,430)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="VR4"/>
+      <a name="label" val="VR3"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -3391,14 +3419,17 @@ a4 34 14 8 74 55 74 40
     <comp lib="4" loc="(570,430)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="VR4"/>
+      <a name="label" val="VR3"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -3670,14 +3701,17 @@ a4 34 14 8 74 55 74 40
     <comp lib="4" loc="(570,430)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="VR4"/>
+      <a name="label" val="VR3"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -3949,14 +3983,17 @@ a4 34 14 8 74 55 74 40
     <comp lib="4" loc="(570,430)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="VR4"/>
+      <a name="label" val="VR3"/>
+      <a name="showInTab" val="true"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -4379,6 +4416,7 @@ a4 34 14 8 74 55 74 40
     </comp>
     <comp lib="4" loc="(1020,530)" name="RAM">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <wire from="(1000,570)" to="(1000,580)"/>
     <wire from="(1000,580)" to="(1020,580)"/>
