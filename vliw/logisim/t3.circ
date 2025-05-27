@@ -656,10 +656,6 @@
       <a name="color" val="#00ff00"/>
       <a name="text" val="ula2"/>
     </comp>
-    <comp lib="8" loc="(1325,185)" name="Text">
-      <a name="color" val="#ff0000"/>
-      <a name="text" val="TODO como fazer nop para as outras unidades func"/>
-    </comp>
     <comp lib="8" loc="(1350,730)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="st mov read"/>
@@ -767,7 +763,7 @@
       <a name="color" val="#a200ff"/>
       <a name="text" val="TESTE Reseta a memDados se apertar reset"/>
     </comp>
-    <comp lib="8" loc="(310,337)" name="Text">
+    <comp lib="8" loc="(310,335)" name="Text">
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO imm8br shiftado Bbranch shiftado"/>
     </comp>
