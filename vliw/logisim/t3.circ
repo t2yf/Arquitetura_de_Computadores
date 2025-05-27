@@ -616,23 +616,23 @@
     <comp lib="5" loc="(190,130)" name="Button">
       <a name="label" val="reset"/>
     </comp>
-    <comp lib="8" loc="(106,454)" name="Text">
+    <comp lib="8" loc="(105,450)" name="Text">
       <a name="color" val="#23fc00"/>
       <a name="text" val="brzi"/>
     </comp>
-    <comp lib="8" loc="(1100,556)" name="Text">
+    <comp lib="8" loc="(1100,555)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="Escrita: seleciona ra para st ou r0 para mov"/>
+    </comp>
+    <comp lib="8" loc="(1120,500)" name="Text">
+      <a name="color" val="#ff0000"/>
+      <a name="text" val="TODO escrita sinal de controle 0 ld e 1 mov"/>
     </comp>
     <comp lib="8" loc="(1120,675)" name="Text">
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO leitura sinal de controle 0 ld e 1 mov"/>
     </comp>
-    <comp lib="8" loc="(1124,500)" name="Text">
-      <a name="color" val="#ff0000"/>
-      <a name="text" val="TODO escrita sinal de controle 0 ld e 1 mov"/>
-    </comp>
-    <comp lib="8" loc="(1191,573)" name="Text">
+    <comp lib="8" loc="(1190,570)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="ld mov write"/>
     </comp>
@@ -644,7 +644,7 @@
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO dados sinal de controle 0 ld e 1 mov"/>
     </comp>
-    <comp lib="8" loc="(1293,242)" name="Text">
+    <comp lib="8" loc="(1290,240)" name="Text">
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO nop vai ser um or de ra com ra"/>
     </comp>
@@ -656,11 +656,11 @@
       <a name="color" val="#00ff00"/>
       <a name="text" val="ula2"/>
     </comp>
-    <comp lib="8" loc="(1327,185)" name="Text">
+    <comp lib="8" loc="(1325,185)" name="Text">
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO como fazer nop para as outras unidades func"/>
     </comp>
-    <comp lib="8" loc="(1354,732)" name="Text">
+    <comp lib="8" loc="(1350,730)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="st mov read"/>
     </comp>
@@ -680,11 +680,11 @@
       <a name="color" val="#00ff00"/>
       <a name="text" val="ula2"/>
     </comp>
-    <comp lib="8" loc="(1413,843)" name="Text">
+    <comp lib="8" loc="(1410,840)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="Leitura: seleciona ra para st ou r0 para mov"/>
     </comp>
-    <comp lib="8" loc="(1481,940)" name="Text">
+    <comp lib="8" loc="(1480,940)" name="Text">
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO ver se ld e st tao funcionando"/>
     </comp>
@@ -696,11 +696,11 @@
       <a name="color" val="#ff0000"/>
       <a name="text" val="TODO sinal de controle 0h e 1l"/>
     </comp>
-    <comp lib="8" loc="(1634,1061)" name="Text">
+    <comp lib="8" loc="(1630,1060)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="Identificar se r0 == 0 em brzi ou brzr "/>
     </comp>
-    <comp lib="8" loc="(1641,1416)" name="Text">
+    <comp lib="8" loc="(1640,1415)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="Operacao movhigh movlow"/>
     </comp>
@@ -708,54 +708,54 @@
       <a name="color" val="#00ff00"/>
       <a name="text" val="brzr e jr"/>
     </comp>
-    <comp lib="8" loc="(1651,1755)" name="Text">
+    <comp lib="8" loc="(1650,1755)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="Selecionar ulaop de acordo com o opcode para ula1 e ula2"/>
     </comp>
-    <comp lib="8" loc="(1952,506)" name="Text">
+    <comp lib="8" loc="(1950,505)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="rb1"/>
     </comp>
-    <comp lib="8" loc="(1962,417)" name="Text">
-      <a name="color" val="#a200ff"/>
-      <a name="text" val="rb3"/>
-    </comp>
-    <comp lib="8" loc="(1963,476)" name="Text">
-      <a name="color" val="#a200ff"/>
-      <a name="text" val="rb4"/>
-    </comp>
-    <comp lib="8" loc="(1964,384)" name="Text">
+    <comp lib="8" loc="(1960,380)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="ra3"/>
     </comp>
-    <comp lib="8" loc="(1964,449)" name="Text">
+    <comp lib="8" loc="(1960,415)" name="Text">
+      <a name="color" val="#a200ff"/>
+      <a name="text" val="rb3"/>
+    </comp>
+    <comp lib="8" loc="(1960,445)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="ra4"/>
     </comp>
-    <comp lib="8" loc="(1990,593)" name="Text">
+    <comp lib="8" loc="(1960,475)" name="Text">
+      <a name="color" val="#a200ff"/>
+      <a name="text" val="rb4"/>
+    </comp>
+    <comp lib="8" loc="(1990,590)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="brzi brzr jr"/>
     </comp>
-    <comp lib="8" loc="(2036,548)" name="Text">
+    <comp lib="8" loc="(2035,545)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="ou entrada mov"/>
     </comp>
-    <comp lib="8" loc="(2060,528)" name="Text">
+    <comp lib="8" loc="(2060,525)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="ra1: entrada de dados"/>
+    </comp>
+    <comp lib="8" loc="(265,1550)" name="Text">
+      <a name="color" val="#ff0000"/>
+      <a name="text" val="TODO nop r0 r0 -&gt; ajustar hardware"/>
     </comp>
     <comp lib="8" loc="(265,670)" name="Text">
       <a name="text" val="MemInst"/>
     </comp>
-    <comp lib="8" loc="(268,1551)" name="Text">
-      <a name="color" val="#ff0000"/>
-      <a name="text" val="TODO nop r0 r0 -&gt; ajustar hardware"/>
-    </comp>
-    <comp lib="8" loc="(282,651)" name="Text">
+    <comp lib="8" loc="(280,650)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="Quatro instrucoes formam uma instrucao longa"/>
     </comp>
-    <comp lib="8" loc="(283,986)" name="Text">
+    <comp lib="8" loc="(280,985)" name="Text">
       <a name="color" val="#a200ff"/>
       <a name="text" val="As subinstrucoes sao direcionadas para cada unidade funcional"/>
     </comp>
@@ -767,7 +767,11 @@
       <a name="color" val="#a200ff"/>
       <a name="text" val="TESTE Reseta a memDados se apertar reset"/>
     </comp>
-    <comp lib="8" loc="(411,450)" name="Text">
+    <comp lib="8" loc="(310,337)" name="Text">
+      <a name="color" val="#ff0000"/>
+      <a name="text" val="TODO imm8br shiftado Bbranch shiftado"/>
+    </comp>
+    <comp lib="8" loc="(410,450)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="brzr e jr"/>
     </comp>
