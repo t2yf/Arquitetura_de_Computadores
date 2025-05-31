@@ -55,7 +55,7 @@
 
     ;;5
     ;;TODO colocar 12 no #0 
-    st r2, r0 ;; #0 = 12 (contador)
+    st r0, r2 ;; #0 = 12 (contador)
     nop 
     nop 
     nop 
@@ -106,7 +106,7 @@
     nop 
 
     ;;12
-    movl -1 ;; r0 = 0000 1111 = 15
+    movl -1 ;; r0 = 0000 1111 = 14
     nop 
     nop 
     nop 
@@ -128,7 +128,7 @@
     ;; loop 
         ;;15
         nop 
-        brzi 3 
+        brzi 4 
         nop 
         nop 
 
@@ -153,7 +153,7 @@
 
     ;; Colocar pos#0B == #3 = 20 
     ;; 19 
-    nop 
+    st r0, r1   ;; Colocar último r0, r1 
     nop
     inc r2, -1 
     inc r3, -1 
@@ -166,6 +166,8 @@
 
     ;; r0 = 0 | r1 = 14 | r2 = 20 | r3 = 3
     ;; r1 e r3 são ponteiros 
+
+    ;; CERTO !!
 
 ;; Soma 
     ;;21
