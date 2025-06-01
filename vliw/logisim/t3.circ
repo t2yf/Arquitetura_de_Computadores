@@ -835,11 +835,11 @@ f0 f0 f0 30 f0 f0
       <a name="color" val="#00ff00"/>
       <a name="text" val="ula2"/>
     </comp>
-    <comp lib="8" loc="(1366,615)" name="Text">
+    <comp lib="8" loc="(1365,615)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="ula1"/>
     </comp>
-    <comp lib="8" loc="(1371,674)" name="Text">
+    <comp lib="8" loc="(1370,670)" name="Text">
       <a name="color" val="#00ff00"/>
       <a name="text" val="ula2"/>
     </comp>
@@ -1944,7 +1944,7 @@ f0 f0 f0 30 f0 f0
       <a name="text" val="Leitura branch"/>
     </comp>
     <comp lib="8" loc="(400,1860)" name="Text">
-      <a name="text" val="Leitura St mov"/>
+      <a name="text" val="Leitura St "/>
     </comp>
     <comp lib="8" loc="(400,2060)" name="Text">
       <a name="text" val="Leitura St mov"/>
@@ -2331,6 +2331,11 @@ f0 f0 f0 30 f0 f0
       <a name="label" val="A"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(430,660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(440,580)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="B"/>
@@ -2500,7 +2505,8 @@ f0 f0 f0 30 f0 f0
     <wire from="(300,500)" to="(300,600)"/>
     <wire from="(320,460)" to="(340,460)"/>
     <wire from="(420,540)" to="(440,540)"/>
-    <wire from="(420,660)" to="(440,660)"/>
+    <wire from="(420,660)" to="(430,660)"/>
+    <wire from="(430,660)" to="(440,660)"/>
     <wire from="(440,540)" to="(440,560)"/>
     <wire from="(440,660)" to="(440,670)"/>
     <wire from="(490,380)" to="(570,380)"/>
