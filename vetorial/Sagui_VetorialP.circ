@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.9.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -538,6 +538,9 @@
       <a name="label" val="VWbId"/>
       <a name="labelfont" val="SansSerif bold 10"/>
       <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1360,2200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
     </comp>
     <comp lib="0" loc="(1360,2710)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -2225,6 +2228,7 @@
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(1460,2200)" name="OR Gate">
+      <a name="inputs" val="3"/>
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(1490,2420)" name="AND Gate">
@@ -2419,7 +2423,7 @@
       <a name="font" val="SansSerif bold 12"/>
       <a name="text" val="VPE: Write back's control signs"/>
     </comp>
-    <comp lib="8" loc="(1584,147)" name="Text">
+    <comp lib="8" loc="(1580,145)" name="Text">
       <a name="font" val="SansSerif bold 32"/>
       <a name="text" val="=============================== Vector Processing Element ==============================="/>
     </comp>
@@ -2427,7 +2431,7 @@
       <a name="font" val="SansSerif bold 32"/>
       <a name="text" val="=============================== Scalar Processing Element ==============================="/>
     </comp>
-    <comp lib="8" loc="(1688,774)" name="Text">
+    <comp lib="8" loc="(1685,770)" name="Text">
       <a name="color" val="#00e4ff"/>
       <a name="font" val="SansSerif bold 30"/>
       <a name="text" val="================== VPE0 =================="/>
@@ -2442,7 +2446,7 @@
       <a name="font" val="SansSerif bold 30"/>
       <a name="text" val="================== VPE3 =================="/>
     </comp>
-    <comp lib="8" loc="(1700,1096)" name="Text">
+    <comp lib="8" loc="(1700,1095)" name="Text">
       <a name="color" val="#45d4e6"/>
       <a name="font" val="SansSerif bold 30"/>
       <a name="text" val="================== VPE1 =================="/>
@@ -2463,7 +2467,7 @@
       <a name="font" val="SansSerif bold 12"/>
       <a name="text" val="Next address"/>
     </comp>
-    <comp lib="8" loc="(943,565)" name="Text">
+    <comp lib="8" loc="(940,565)" name="Text">
       <a name="text" val="RA's addr"/>
     </comp>
     <comp loc="(1060,2100)" name="Hazard_Unit"/>
@@ -2471,10 +2475,10 @@
     <comp loc="(1220,2680)" name="Control_Unit"/>
     <comp loc="(1250,2400)" name="SPE_Register_Bank"/>
     <comp loc="(1400,2640)" name="ForwardingBranch_Unit"/>
-    <comp loc="(1510,1200)" name="VPE3_Register_Bank"/>
-    <comp loc="(1510,1510)" name="VPE3_Register_Bank"/>
+    <comp loc="(1510,1200)" name="VPE1_Register_Bank"/>
+    <comp loc="(1510,1510)" name="VPE2_Register_Bank"/>
     <comp loc="(1510,1820)" name="VPE3_Register_Bank"/>
-    <comp loc="(1510,890)" name="VPE3_Register_Bank"/>
+    <comp loc="(1510,890)" name="VPE0_Register_Bank"/>
     <comp loc="(1620,2380)" name="Stg_ID_EX_Spe"/>
     <comp loc="(1650,630)" name="Stg_ID_EX_Vpe_General"/>
     <comp loc="(1660,1140)" name="Stg_ID_EX_Vpe"/>
@@ -2620,6 +2624,7 @@
     <wire from="(1350,1640)" to="(1350,1650)"/>
     <wire from="(1350,1950)" to="(1350,1960)"/>
     <wire from="(1350,2420)" to="(1380,2420)"/>
+    <wire from="(1360,2200)" to="(1430,2200)"/>
     <wire from="(1370,2440)" to="(1380,2440)"/>
     <wire from="(1420,2190)" to="(1430,2190)"/>
     <wire from="(1420,2210)" to="(1430,2210)"/>
@@ -2635,9 +2640,10 @@
     <wire from="(1450,2360)" to="(1460,2360)"/>
     <wire from="(1450,2410)" to="(1460,2410)"/>
     <wire from="(1460,2200)" to="(1470,2200)"/>
-    <wire from="(1470,2200)" to="(1470,2230)"/>
-    <wire from="(1470,2230)" to="(1470,2280)"/>
-    <wire from="(1470,2280)" to="(1470,2330)"/>
+    <wire from="(1470,2200)" to="(1470,2220)"/>
+    <wire from="(1470,2220)" to="(1470,2270)"/>
+    <wire from="(1470,2270)" to="(1470,2320)"/>
+    <wire from="(1470,2320)" to="(1470,2330)"/>
     <wire from="(1470,2540)" to="(1480,2540)"/>
     <wire from="(1470,2560)" to="(1480,2560)"/>
     <wire from="(1470,650)" to="(1480,650)"/>
@@ -3030,17 +3036,17 @@
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="65" y="64">PC_P</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="59" y="144">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="65" y="64">PC_P</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="59" y="144">Clk</text>
       <rect height="3" stroke="none" width="10" x="50" y="99"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">R</text>
       <rect height="4" stroke="none" width="10" x="130" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="end" x="125" y="64">PC_N</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="end" x="125" y="64">PC_N</text>
       <rect height="20" stroke="none" width="70" x="60" y="110"/>
       <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="70" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="94" y="127">PC</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="94" y="127">PC</text>
       <polygon fill="#ffffff" points="67,132 71,122 74,132" stroke="none"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="115" y="143">En</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="115" y="143">En</text>
       <circ-anchor facing="east" x="140" y="60"/>
       <circ-port dir="in" pin="450,320" x="50" y="60"/>
       <circ-port dir="in" pin="450,340" x="120" y="130"/>
@@ -3091,11 +3097,11 @@
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="68"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="74">Addr_PC</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="165" y="74">Inst</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="74">Addr_PC</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="165" y="74">Inst</text>
       <rect height="20" stroke="none" width="110" x="60" y="130"/>
       <rect fill="none" height="100" stroke="#000000" stroke-width="2" width="110" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="118" y="145">MI</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="118" y="145">MI</text>
       <rect height="4" stroke="none" width="10" x="170" y="68"/>
       <circ-anchor facing="east" x="180" y="70"/>
       <circ-port dir="in" pin="420,300" x="50" y="70"/>
@@ -3137,27 +3143,27 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">Opcode</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">Opcode</text>
       <rect height="3" stroke="none" width="10" x="260" y="59"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="64">Vec</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">Vec</text>
       <rect height="3" stroke="none" width="10" x="260" y="199"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="204">WESpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="204">WESpe</text>
       <rect height="3" stroke="none" width="10" x="260" y="79"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="84">RadSpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="84">RadSpe</text>
       <rect height="4" stroke="none" width="10" x="260" y="118"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="124">UlaOpSpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="124">UlaOpSpe</text>
       <rect height="4" stroke="none" width="10" x="260" y="138"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="144">UlaSrSpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="144">UlaSrSpe</text>
       <rect height="3" stroke="none" width="10" x="260" y="99"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="104">BrSpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="104">BrSpe</text>
       <rect height="3" stroke="none" width="10" x="260" y="159"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="164">MDSPe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="164">MDSPe</text>
       <rect height="3" stroke="none" width="10" x="260" y="179"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="184">WMSpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="184">WMSpe</text>
       <rect height="20" stroke="none" width="200" x="60" y="230"/>
       <rect fill="none" height="200" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="244">Control_Unit</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="224">V_Sgs</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="244">Control_Unit</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="224">V_Sgs</text>
       <rect height="3" stroke="none" width="10" x="259" y="219"/>
       <circ-anchor facing="east" x="270" y="60"/>
       <circ-port dir="in" pin="480,330" x="50" y="60"/>
@@ -3306,24 +3312,24 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" font-weight="bold" text-anchor="start" x="65" y="124">Data</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" font-weight="bold" text-anchor="start" x="65" y="124">Data</text>
       <rect height="4" stroke="none" width="10" x="50" y="78"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" font-weight="bold" text-anchor="start" x="65" y="64">RA</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" font-weight="bold" text-anchor="start" x="65" y="184">WE</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" font-weight="bold" text-anchor="start" x="65" y="64">RA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" font-weight="bold" text-anchor="start" x="65" y="184">WE</text>
       <rect height="4" stroke="none" width="10" x="50" y="118"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" font-weight="bold" text-anchor="start" x="65" y="144">RD</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" font-weight="bold" text-anchor="start" x="65" y="144">RD</text>
       <rect height="4" stroke="none" width="10" x="50" y="138"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" font-weight="bold" text-anchor="start" x="65" y="84">RB</text>
-      <text dominant-baseline="alphabetic" font-family="Courier 10 Pitch" font-size="6" font-weight="bold" text-anchor="start" x="61" y="223">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" font-weight="bold" text-anchor="start" x="65" y="84">RB</text>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="6" font-weight="bold" text-anchor="start" x="61" y="223">Clk</text>
       <rect height="3" stroke="none" width="10" x="50" y="179"/>
-      <text dominant-baseline="alphabetic" font-family="Courier 10 Pitch" font-size="6" font-weight="bold" text-anchor="start" x="108" y="223">R</text>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="6" font-weight="bold" text-anchor="start" x="108" y="223">R</text>
       <rect height="4" stroke="none" width="10" x="231" y="88"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" font-weight="bold" text-anchor="end" x="225" y="94">RD1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" font-weight="bold" text-anchor="end" x="225" y="94">RD1</text>
       <rect height="4" stroke="none" width="10" x="231" y="148"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" font-weight="bold" text-anchor="end" x="225" y="154">RD2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" font-weight="bold" text-anchor="end" x="225" y="154">RD2</text>
       <rect height="20" stroke="none" width="170" x="60" y="190"/>
       <rect fill="none" height="160" stroke="#000000" stroke-width="2" width="170" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="147" y="204">SPE RegBank</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="147" y="204">SPE RegBank</text>
       <polyline fill="none" points="80,210 80,220" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="100,210 100,220" stroke="#000000" stroke-width="2"/>
       <circ-anchor facing="east" x="240" y="90"/>
@@ -3591,13 +3597,13 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="360" y="88"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="375" y="94">RA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="375" y="94">RA</text>
       <rect height="4" stroke="none" width="10" x="360" y="228"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="375" y="234">RB</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="413" y="215">ULA_Op</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="375" y="234">RB</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="413" y="215">ULA_Op</text>
       <rect height="4" stroke="none" width="10" x="499" y="158"/>
       <polygon fill="none" points="370,60 370,120 410,160 370,200 370,260 500,200 500,120" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="central" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="449" y="161">SPE_ULA</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="449" y="161">SPE_ULA</text>
       <polyline fill="none" points="440,228 440,240" stroke="#000000" stroke-width="2"/>
       <circ-anchor facing="east" x="510" y="160"/>
       <circ-port dir="in" pin="1010,580" x="440" y="240"/>
@@ -3897,18 +3903,18 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">Addr</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">Addr</text>
       <rect height="3" stroke="none" width="10" x="50" y="79"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">WM</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">WM</text>
       <rect height="3" stroke="none" width="10" x="50" y="99"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">Clk</text>
       <rect height="4" stroke="none" width="10" x="50" y="118"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="124">d</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="124">d</text>
       <rect height="4" stroke="none" width="10" x="170" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="165" y="64">data</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="165" y="64">data</text>
       <rect height="20" stroke="none" width="110" x="60" y="130"/>
       <rect fill="none" height="100" stroke="#000000" stroke-width="2" width="110" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="115" y="143">SPE_MD</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="115" y="143">SPE_MD</text>
       <circ-anchor facing="east" x="180" y="60"/>
       <circ-port dir="in" pin="980,540" x="50" y="60"/>
       <circ-port dir="in" pin="990,570" x="50" y="80"/>
@@ -3967,18 +3973,18 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">VectorSigns</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">VectorSigns</text>
       <rect height="4" stroke="none" width="10" x="210" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="205" y="64">ID_V</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="205" y="64">ID_V</text>
       <rect height="4" stroke="none" width="10" x="210" y="78"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="205" y="84">EXE_V</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="205" y="84">EXE_V</text>
       <rect height="4" stroke="none" width="10" x="210" y="98"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="205" y="104">MEM_V</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="205" y="104">MEM_V</text>
       <rect height="20" stroke="none" width="150" x="60" y="130"/>
       <rect fill="none" height="100" stroke="#000000" stroke-width="2" width="150" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="140" y="143">VPE_Ctrl</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="140" y="143">VPE_Ctrl</text>
       <rect height="4" stroke="none" width="10" x="211" y="118"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="206" y="123">WB_V</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="206" y="123">WB_V</text>
       <circ-anchor facing="east" x="220" y="60"/>
       <circ-port dir="in" pin="360,330" x="50" y="60"/>
       <circ-port dir="out" pin="520,300" x="220" y="60"/>
@@ -4082,24 +4088,24 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="50" y="138"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="144">Data</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">Data</text>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">RA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">RA</text>
       <rect height="3" stroke="none" width="10" x="50" y="179"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">WE</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="184">WE</text>
       <rect height="4" stroke="none" width="10" x="50" y="98"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">RD</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">RD</text>
       <rect height="4" stroke="none" width="10" x="50" y="78"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">RB</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="97" y="221">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">RB</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="97" y="221">R</text>
       <rect height="4" stroke="none" width="10" x="240" y="88"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
       <rect height="4" stroke="none" width="10" x="240" y="148"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
       <rect height="20" stroke="none" width="180" x="60" y="190"/>
       <rect fill="none" height="160" stroke="#000000" stroke-width="2" width="180" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
       <polyline fill="none" points="70,210 70,220" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="90,210 90,220" stroke="#000000" stroke-width="2"/>
       <circ-anchor facing="east" x="250" y="90"/>
@@ -4303,16 +4309,19 @@ a1 b4 d9 23 30 71 70
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR3"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -4364,28 +4373,28 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <polyline fill="none" points="70,210 70,220" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="144">Data</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">Data</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
       <rect height="3" stroke="none" width="10" x="50" y="179"/>
       <rect height="4" stroke="none" width="10" x="50" y="78"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">RA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">RA</text>
       <rect height="4" stroke="none" width="10" x="240" y="88"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">RB</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">RB</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
       <rect height="4" stroke="none" width="10" x="50" y="98"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">WE</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">RD</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="151" y="204">RegBank_VPE2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="184">WE</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">RD</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="151" y="204">RegBank_VPE2</text>
       <rect fill="none" height="160" stroke="#000000" stroke-width="2" width="180" x="60" y="50"/>
       <rect height="4" stroke="none" width="10" x="50" y="138"/>
       <rect height="4" stroke="none" width="10" x="240" y="148"/>
       <rect height="20" stroke="none" width="180" x="60" y="190"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="97" y="221">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="97" y="221">R</text>
       <polyline fill="none" points="90,210 90,220" stroke="#000000" stroke-width="2"/>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="central" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="150" y="200">RegBank_VPE1</text>
+      <text dominant-baseline="central" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="150" y="200">RegBank_VPE1</text>
       <circ-anchor facing="east" x="250" y="90"/>
       <circ-port dir="in" pin="300,560" x="50" y="180"/>
       <circ-port dir="in" pin="310,300" x="50" y="140"/>
@@ -4586,16 +4595,19 @@ a1 b4 d9 23 30 71 70
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR3"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -4649,25 +4661,25 @@ a1 b4 d9 23 30 71 70
       <polyline fill="none" points="90,210 90,220" stroke="#000000" stroke-width="2"/>
       <rect height="3" stroke="none" width="10" x="50" y="179"/>
       <rect fill="none" height="160" stroke="#000000" stroke-width="2" width="180" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="97" y="221">R</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="144">Data</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">WE</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">RA</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="97" y="221">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">Data</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="184">WE</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">RA</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
       <rect height="4" stroke="none" width="10" x="240" y="88"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
       <rect height="4" stroke="none" width="10" x="50" y="78"/>
       <rect height="4" stroke="none" width="10" x="50" y="138"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">RD</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">RD</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
       <rect height="4" stroke="none" width="10" x="240" y="148"/>
       <rect height="20" stroke="none" width="180" x="60" y="190"/>
       <polyline fill="none" points="70,210 70,220" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">RB</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">RB</text>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
       <rect height="4" stroke="none" width="10" x="50" y="98"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="151" y="204">RegBank_VPE2</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="151" y="204">RegBank_VPE2</text>
       <circ-anchor facing="east" x="250" y="90"/>
       <circ-port dir="in" pin="300,560" x="50" y="180"/>
       <circ-port dir="in" pin="310,300" x="50" y="140"/>
@@ -4869,16 +4881,19 @@ a1 b4 d9 23 30 71 70
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR3"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -4929,30 +4944,30 @@ a1 b4 d9 23 30 71 70
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="44" y="222">Clk</text>
       <rect height="3" stroke="none" width="10" x="50" y="179"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">RA</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="97" y="221">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">RA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="97" y="221">R</text>
       <rect height="4" stroke="none" width="10" x="240" y="88"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="152" y="204">RegBank_VPE0</text>
       <polyline fill="none" points="90,210 90,220" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="70,210 70,220" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="151" y="204">RegBank_VPE2</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="144">Data</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="94">RD1</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="151" y="204">RegBank_VPE2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">Data</text>
       <rect height="4" stroke="none" width="10" x="50" y="138"/>
-      <text dominant-baseline="central" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="150" y="200">RegBank_VPE1</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="184">WE</text>
+      <text dominant-baseline="central" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="150" y="200">RegBank_VPE1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="184">WE</text>
       <rect height="4" stroke="none" width="10" x="240" y="148"/>
       <rect height="4" stroke="none" width="10" x="50" y="78"/>
       <rect height="4" stroke="none" width="10" x="50" y="98"/>
       <rect height="20" stroke="none" width="180" x="60" y="190"/>
       <rect height="4" stroke="none" width="10" x="50" y="58"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">RD</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">RD</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="235" y="154">RD2</text>
       <rect fill="none" height="160" stroke="#000000" stroke-width="2" width="180" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">RB</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="149" y="204">RegBank_VPE3</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">RB</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="149" y="204">RegBank_VPE3</text>
       <circ-anchor facing="east" x="250" y="90"/>
       <circ-port dir="in" pin="300,560" x="50" y="180"/>
       <circ-port dir="in" pin="310,300" x="50" y="140"/>
@@ -5154,16 +5169,19 @@ a1 b4 d9 23 30 71 70
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR1"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,580)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR2"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(570,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="VR3"/>
       <a name="showInTab" val="true"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="8" loc="(595,295)" name="Text">
       <a name="color" val="#1f2bff"/>
@@ -5215,12 +5233,12 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <polygon fill="none" points="370,60 370,100 400,150 370,200 370,240 470,200 470,120" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="375" y="224">RB</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="375" y="224">RB</text>
       <rect height="4" stroke="none" width="10" x="469" y="158"/>
       <polyline fill="none" points="430,218 430,230" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="375" y="84">RA</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="403" y="205">ULA_Op</text>
-      <text dominant-baseline="central" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="435" y="155">VPE_ULA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="375" y="84">RA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="403" y="205">ULA_Op</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="435" y="155">VPE_ULA</text>
       <rect height="4" stroke="none" width="10" x="360" y="218"/>
       <rect height="4" stroke="none" width="10" x="360" y="78"/>
       <circ-anchor facing="east" x="480" y="160"/>
@@ -5523,17 +5541,17 @@ a1 b4 d9 23 30 71 70
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="95" y="164">WM</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="95" y="164">WM</text>
       <rect height="4" stroke="none" width="10" x="80" y="118"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="165" y="124">data</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="95" y="124">Addr</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="165" y="124">data</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="95" y="124">Addr</text>
       <rect height="20" stroke="none" width="80" x="90" y="170"/>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="129" y="185">VPE_MD</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="129" y="185">VPE_MD</text>
       <rect height="4" stroke="none" width="10" x="170" y="118"/>
       <rect height="3" stroke="none" width="10" x="80" y="159"/>
       <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="80" x="90" y="110"/>
       <rect height="4" stroke="none" width="10" x="81" y="128"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="95" y="135">d</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="95" y="135">d</text>
       <circ-anchor facing="east" x="180" y="120"/>
       <circ-port dir="in" pin="980,540" x="80" y="120"/>
       <circ-port dir="in" pin="990,570" x="80" y="160"/>
@@ -5608,25 +5626,25 @@ a1 b4 d9 23 30 71 70
       <rect height="4" stroke="none" width="10" x="430" y="388"/>
       <polyline fill="none" points="389,404 389,414" stroke="#000000" stroke-width="2"/>
       <rect fill="none" height="350" stroke="#050505" stroke-width="2" width="80" x="349" y="54"/>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="388" y="47">Stg_ID_EX_Spe</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="339" y="414">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="388" y="47">Stg_ID_EX_Spe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="339" y="414">Clk</text>
       <polyline fill="none" points="369,404 369,414" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="399" y="414">R</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="352" y="72">ES_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="352" y="172">WS_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="352" y="122">MS_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="352" y="202">R1_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="352" y="303">R2_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="351" y="393">Im_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="351" y="372">ARs_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="399" y="414">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="352" y="72">ES_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="352" y="172">WS_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="352" y="122">MS_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="352" y="202">R1_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="352" y="303">R2_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="351" y="393">Im_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="351" y="372">ARs_Id</text>
       <rect height="4" stroke="none" width="10" x="430" y="368"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="395" y="203">R1_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="396" y="304">R2_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="391" y="373">ARs_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="394" y="391">Im_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="395" y="172">WS_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="395" y="72">ES_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="395" y="122">MS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="395" y="203">R1_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="396" y="304">R2_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="391" y="373">ARs_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="394" y="391">Im_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="395" y="172">WS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="395" y="72">ES_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="395" y="122">MS_Ex</text>
       <circ-anchor facing="east" x="440" y="200"/>
       <circ-port dir="in" pin="590,1030" x="340" y="390"/>
       <circ-port dir="in" pin="590,250" x="340" y="70"/>
@@ -5833,16 +5851,16 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <rect height="4" stroke="none" width="10" x="170" y="218"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="170" y="402">Clk</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="207" y="402">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="170" y="402">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="207" y="402">R</text>
       <rect height="4" stroke="none" width="10" x="260" y="238"/>
       <rect fill="none" height="350" stroke="#000000" stroke-width="2" width="80" x="183" y="40"/>
       <polyline fill="none" points="200,390 200,400" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="220,390 220,400" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="244">Inst_ID</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="184" y="224">Inst_IF</text>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="219" y="33">Stg_IF_ID</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="226" y="403">En</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="244">Inst_ID</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="184" y="224">Inst_IF</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="219" y="33">Stg_IF_ID</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="226" y="403">En</text>
       <polyline fill="none" points="220,390 220,400" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="220,390 220,400" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="220,390 220,400" stroke="#000000" stroke-width="2"/>
@@ -5899,23 +5917,23 @@ a1 b4 d9 23 30 71 70
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="322" y="204">ARs_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="324" y="184">WS_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="361" y="204">ARs_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="323" y="161">MS_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="366" y="161">MS_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="366" y="222">Im_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="141">ES_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="184">WS_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="324" y="141">ES_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="322" y="222">Im_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="322" y="204">ARs_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="324" y="184">WS_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="361" y="204">ARs_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="323" y="161">MS_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="366" y="161">MS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="366" y="222">Im_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="141">ES_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="184">WS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="324" y="141">ES_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="322" y="222">Im_Id</text>
       <polyline fill="none" points="340,240 340,230" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="380,230 380,240" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="400,180 410,180" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="388" y="244">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="388" y="244">R</text>
       <rect fill="none" height="100" stroke="#050505" stroke-width="2" width="80" x="320" y="130"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="309" y="242">Clk</text>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_ID_EX_Gen</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="309" y="242">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_ID_EX_Gen</text>
       <polyline fill="none" points="320,140 310,140" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="320,160 310,160" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="320,180 310,180" stroke="#000000" stroke-width="2"/>
@@ -6140,18 +6158,18 @@ a1 b4 d9 23 30 71 70
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="312" y="376">Clk</text>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_ID_EX_Vpe</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="390" y="374">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="312" y="376">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_ID_EX_Vpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="390" y="374">R</text>
       <rect fill="none" height="240" stroke="#050505" stroke-width="2" width="80" x="320" y="120"/>
       <polyline fill="none" points="340,360 340,370" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="380,360 380,370" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="325" y="214">R1_Id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="325" y="272">R2_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="325" y="214">R1_Id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="325" y="272">R2_Id</text>
       <polyline fill="none" points="320,210 310,210" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="320,270 310,270" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="365" y="282">R2_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="365" y="153">R1_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="365" y="282">R2_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="365" y="153">R1_Ex</text>
       <polyline fill="none" points="410,150 400,150" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="410,280 400,280" stroke="#000000" stroke-width="2"/>
       <circ-anchor facing="east" x="410" y="150"/>
@@ -6229,10 +6247,10 @@ a1 b4 d9 23 30 71 70
     <appear>
       <polyline fill="none" points="360,420 360,430" stroke="#000000" stroke-width="2"/>
       <rect fill="none" height="350" stroke="#000000" stroke-width="2" width="80" x="350" y="70"/>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="393" y="65">Stg_Ex_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="388" y="435">R</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="393" y="65">Stg_Ex_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="388" y="435">R</text>
       <polyline fill="none" points="380,422 380,430" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="330" y="434">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="330" y="434">Clk</text>
       <rect height="4" stroke="none" width="10" x="340" y="298"/>
       <rect height="3" stroke="none" width="10" x="339" y="329"/>
       <rect height="4" stroke="none" width="10" x="340" y="108"/>
@@ -6245,18 +6263,18 @@ a1 b4 d9 23 30 71 70
       <rect height="4" stroke="none" width="10" x="431" y="88"/>
       <rect height="4" stroke="none" width="10" x="340" y="388"/>
       <rect height="4" stroke="none" width="10" x="430" y="388"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="355" y="93">MS_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="354" y="114">WS_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="355" y="274">UR_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="356" y="303">Ad_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="357" y="332">Dt_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="355" y="392">Rd_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="396" y="393">Rd_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="395" y="224">UR_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="395" y="93">MS_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="395" y="114">WS_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="396" y="334">Dt_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="396" y="303">Ad_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="355" y="93">MS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="354" y="114">WS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="355" y="274">UR_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="356" y="303">Ad_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="357" y="332">Dt_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="355" y="392">Rd_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="396" y="393">Rd_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="395" y="224">UR_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="395" y="93">MS_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="395" y="114">WS_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="396" y="334">Dt_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="396" y="303">Ad_Me</text>
       <circ-anchor facing="east" x="440" y="220"/>
       <circ-port dir="in" pin="590,1030" x="340" y="390"/>
       <circ-port dir="in" pin="590,390" x="340" y="90"/>
@@ -6436,23 +6454,23 @@ a1 b4 d9 23 30 71 70
     <a name="simulationFrequency" val="1.0"/>
     <appear>
       <polyline fill="none" points="400,220 410,220" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="309" y="242">Clk</text>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_EX_MEM_Gen</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="309" y="242">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_EX_MEM_Gen</text>
       <polyline fill="none" points="400,180 410,180" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="310,180 320,180" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="388" y="244">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="388" y="244">R</text>
       <rect fill="none" height="100" stroke="#050505" stroke-width="2" width="80" x="320" y="130"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="324" y="182">WS_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="182">WS_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="324" y="143">MS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="324" y="182">WS_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="182">WS_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="324" y="143">MS_Ex</text>
       <polyline fill="none" points="340,240 340,230" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="310,220 320,220" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="325" y="218">Rd_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="325" y="218">Rd_Ex</text>
       <polyline fill="none" points="400,140 410,140" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="143">MS_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="143">MS_Me</text>
       <polyline fill="none" points="320,140 310,140" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="380,230 380,240" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="end" x="395" y="217">Rd_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="end" x="395" y="217">Rd_Me</text>
       <circ-anchor facing="east" x="410" y="220"/>
       <circ-port dir="in" pin="590,1030" x="310" y="220"/>
       <circ-port dir="in" pin="590,750" x="310" y="140"/>
@@ -6555,24 +6573,24 @@ a1 b4 d9 23 30 71 70
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="324" y="292">Ad_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="325" y="324">Dt_Ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="end" x="396" y="323">Dt_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="324" y="292">Ad_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="325" y="324">Dt_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="end" x="396" y="323">Dt_Me</text>
       <polyline fill="none" points="310,290 320,290" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="400,290 410,290" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="380,360 380,370" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="320,320 310,320" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="310,250 320,250" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="312" y="376">Clk</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="202">UR_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="312" y="376">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="202">UR_Me</text>
       <rect fill="none" height="240" stroke="#050505" stroke-width="2" width="80" x="320" y="120"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="390" y="374">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="390" y="374">R</text>
       <polyline fill="none" points="400,320 410,320" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="325" y="253">UR_Ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="325" y="253">UR_Ex</text>
       <polyline fill="none" points="399,199 409,199" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="340,360 340,370" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="292">Ad_Me</text>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_EX_MEM_Vpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="292">Ad_Me</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_EX_MEM_Vpe</text>
       <circ-anchor facing="east" x="410" y="200"/>
       <circ-port dir="in" pin="590,650" x="310" y="250"/>
       <circ-port dir="in" pin="590,790" x="310" y="290"/>
@@ -6674,21 +6692,21 @@ a1 b4 d9 23 30 71 70
     <appear>
       <rect height="3" stroke="none" width="10" x="430" y="109"/>
       <rect height="4" stroke="none" width="10" x="429" y="228"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="398" y="112">WS_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="398" y="112">WS_Wb</text>
       <rect height="4" stroke="none" width="10" x="339" y="228"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="388" y="435">R</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="353" y="392">Rd_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="354" y="232">Dt_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="388" y="435">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="353" y="392">Rd_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="354" y="232">Dt_Me</text>
       <rect height="4" stroke="none" width="10" x="340" y="388"/>
       <rect height="4" stroke="none" width="10" x="430" y="388"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="398" y="232">Dt_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="398" y="232">Dt_Wb</text>
       <rect height="4" stroke="none" width="10" x="340" y="108"/>
       <polyline fill="none" points="360,420 360,430" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="393" y="65">Stg_Me_Wb</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="354" y="112">WS_Me</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="393" y="65">Stg_Me_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="354" y="112">WS_Me</text>
       <polyline fill="none" points="380,422 380,430" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="397" y="392">Rd_Wb</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="330" y="434">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="397" y="392">Rd_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="330" y="434">Clk</text>
       <rect fill="none" height="350" stroke="#000000" stroke-width="2" width="80" x="350" y="70"/>
       <circ-anchor facing="east" x="440" y="230"/>
       <circ-port dir="in" pin="590,1030" x="340" y="390"/>
@@ -6791,18 +6809,18 @@ a1 b4 d9 23 30 71 70
     <appear>
       <polyline fill="none" points="340,240 340,230" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="380,230 380,240" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="388" y="244">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="388" y="244">R</text>
       <rect fill="none" height="100" stroke="#050505" stroke-width="2" width="80" x="320" y="130"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="309" y="242">Clk</text>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_MEM_WB_Gen</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="309" y="242">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_MEM_WB_Gen</text>
       <polyline fill="none" points="320,150 310,150" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="320,210 310,210" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="400,210 410,210" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="400,150 410,150" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="end" x="395" y="217">Rd_Wb</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="324" y="152">WS_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="325" y="218">Rd_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="152">WS_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="end" x="395" y="217">Rd_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="324" y="152">WS_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="325" y="218">Rd_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="152">WS_Wb</text>
       <circ-anchor facing="east" x="410" y="150"/>
       <circ-port dir="in" pin="590,790" x="310" y="150"/>
       <circ-port dir="in" pin="590,940" x="310" y="210"/>
@@ -6882,16 +6900,16 @@ a1 b4 d9 23 30 71 70
       <polyline fill="none" points="340,360 340,370" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="380,360 380,370" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="310,210 320,210" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="390" y="374">R</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="312" y="376">Clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="390" y="374">R</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="312" y="376">Clk</text>
       <polyline fill="none" points="400,210 410,210" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Courier 10 Pitch" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_MEM_WB_Vpe</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="324" y="214">Dt_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="214">Dt_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#3482ff" font-family="Dialog" font-size="16" font-weight="bold" text-anchor="middle" x="367" y="115">Stg_MEM_WB_Vpe</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="324" y="214">Dt_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="214">Dt_Wb</text>
       <polyline fill="none" points="320,150 310,150" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="410,150 400,150" stroke="#000000" stroke-width="2"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="323" y="153">NP_Me</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="10" text-anchor="start" x="367" y="152">NP_Wb</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="323" y="153">NP_Me</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="10" text-anchor="start" x="367" y="152">NP_Wb</text>
       <circ-anchor facing="east" x="410" y="210"/>
       <circ-port dir="in" pin="590,1030" x="310" y="210"/>
       <circ-port dir="in" pin="590,910" x="310" y="150"/>
@@ -7345,15 +7363,15 @@ a1 b4 d9 23 30 71 70
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="182" y="153">RD_ex</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="123" y="153">RB_id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="73" y="153">RA_id</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="87" y="62">MRd</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="123" y="61">Br</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="213" y="82">hnop</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="79" y="85">EN</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="182" y="153">RD_ex</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="123" y="153">RB_id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="73" y="153">RA_id</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="87" y="62">MRd</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="123" y="61">Br</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="213" y="82">hnop</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="79" y="85">EN</text>
       <rect fill="none" height="110" stroke="#000000" stroke-width="2" width="160" x="60" y="50"/>
-      <text dominant-baseline="alphabetic" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="143" y="108">Hazard_Unit</text>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="143" y="108">Hazard_Unit</text>
       <polyline fill="none" points="80,160 80,170" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="140,160 140,170" stroke="#000000" stroke-width="2"/>
       <polyline fill="none" points="200,160 200,170" stroke="#000000" stroke-width="2"/>
